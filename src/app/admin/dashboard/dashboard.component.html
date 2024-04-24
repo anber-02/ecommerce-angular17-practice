@@ -1,0 +1,18 @@
+<div class="layout">
+  <div class="header bg-slate-800 mr-5 rounded-md my-1 text-white flex items-center justify-between px-2">
+    <h1>Soy el header</h1>
+    <div class="relative flex flex-wrap items-stretch transition-all rounded-lg ease">
+      <span class="text-sm ease leading-5.6 absolute z-50 -ml-px flex h-full items-center whitespace-nowrap rounded-lg rounded-tr-none rounded-br-none border border-r-0 border-transparent bg-transparent py-2 px-2.5 text-center font-normal text-slate-500 transition-all">
+        <svg class="w-6 h-6"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+      </span>
+      <input type="text" placeholder="Type here" class="pl-9 text-sm focus:shadow-primary-outline dark:bg-slate-850 ease w-1/100 leading-5.6 relative -ml-px block min-w-0 flex-auto rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 pr-3 text-gray-700 transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none focus:transition-shadow"  />
+    </div>
+  </div>
+  <div class="sidebar">
+    <app-sidemenu />
+  </div>
+  <main class="main overflow-auto py-2">
+    <router-outlet />
+  </main>
+
+</div>

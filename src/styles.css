@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: #ffffff27;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff95;
+  border-radius: 20px;
+}
+
+.layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "side header"
+    "side main";
+}
+
+.header {
+  grid-area: header;
+}
+.sidebar {
+  grid-area: side;
+}
+.main {
+  @apply bg-slate-600;
+  grid-area: main;
+  border-radius: 8px;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "c1 c2 c3"
+    "c4 c4 c5"
+    "c4 c4 c6"; */
+  gap: 20px;
+  padding:10px;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+}
+
+/* .card:nth-child(1) {
+  grid-area: c1;
+}
+.card:nth-child(2) {
+  grid-area: c2;
+}
+.card:nth-child(3) {
+  grid-area: c3;
+}
+.card:nth-child(4) {
+  grid-area: c4;
+} */
+
+/* grid-areas: initial -> this property reset the areas  */
