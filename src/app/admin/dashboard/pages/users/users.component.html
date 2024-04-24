@@ -1,0 +1,63 @@
+<section class="container">
+
+  <div class="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
+    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-800">
+        <tr>
+
+          <th scope="col"
+            class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            Name
+          </th>
+
+          <th scope="col"
+            class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            Status
+          </th>
+
+          <th scope="col"
+            class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            Rol
+          </th>
+
+          <th scope="col"
+            class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            Email
+          </th>
+          <th scope="col"
+            class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            Id
+          </th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
+        <!--el track es la key del ciclo  -->
+        @for (user of usersService.users(); track user.id) {
+        <tr>
+          <td class="flex gap-2 px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+            <img [srcset]="user.avatar" [alt]="user.name" class="rounded w-8 h-8" />
+            <span>{{user.name}}</span>
+          </td>
+          <td class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+            <div
+              class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 text-emerald-500 bg-emerald-100/60 dark:bg-gray-800">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+
+              <h2 class="text-sm font-normal">Paid</h2>
+            </div>
+          </td>
+          <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">{{user.role}}</td>
+          <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">{{user.email}}</td>
+          <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">{{user.id}}</td>
+        </tr>
+        } @empty {
+        <span>Cargando</span>
+        }
+      </tbody>
+    </table>
+  </div>
+
+</section>

@@ -1,5 +1,16 @@
 # Ecommerce
 
+users
+  -new user
+  -reports
+articles
+ -new products
+ -products list 
+ -products page(details)
+ -categories
+  -new category
+  -category list
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
 
 ## Development server
